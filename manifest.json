@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Awesomplete Replacer",
+  "version": "1.0",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "host_permissions": [
+    "https://animemusicquiz.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["libs/awesomplete.js"],
+      "matches": ["https://animemusicquiz.com/*"]
+    }
+  ]
+}
