@@ -2,20 +2,25 @@
   "manifest_version": 3,
   "name": "Awesomplete Replacer",
   "version": "1.0",
-  "permissions": [
-    "webRequest",
-    "webRequestBlocking"
-  ],
-  "host_permissions": [
-    "https://animemusicquiz.com/*"
-  ],
+  "permissions": ["declarativeNetRequest"],
+  "host_permissions": ["https://animemusicquiz.com/*"],
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "background.js"
   },
   "web_accessible_resources": [
     {
       "resources": ["libs/awesomplete.js"],
       "matches": ["https://animemusicquiz.com/*"]
     }
-  ]
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
 }
+

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/libs/awesomplete.js"
+      }
+    },
+    "condition": {
+      "urlFilter": "/scripts/pages/gamePage/libraries/awesomplete.min.js",
+      "resourceTypes": ["script"]
+    }
+  }
+]
