@@ -4,23 +4,26 @@
   "version": "1.0",
   "permissions": ["declarativeNetRequest"],
   "host_permissions": ["https://animemusicquiz.com/*"],
-  "background": {
-    "service_worker": "background.js"
-  },
+  "content_scripts": [
+      {
+          "matches": ["https://animemusicquiz.com/*"],
+          "js": ["content.js"]
+      }
+  ],
   "web_accessible_resources": [
-    {
-      "resources": ["libs/awesomplete.js"],
-      "matches": ["https://animemusicquiz.com/*"]
-    }
+      {
+          "resources": ["libs/awesomplete.js", "skip.js"],
+          "matches": ["https://animemusicquiz.com/*"]
+      }
   ],
   "declarative_net_request": {
-    "rule_resources": [
-      {
-        "id": "ruleset_1",
-        "enabled": true,
-        "path": "rules.json"
-      }
-    ]
+      "rule_resources": [
+          {
+              "id": "ruleset_1",
+              "enabled": true,
+              "path": "rules.json"
+          }
+      ]
   }
 }
 
