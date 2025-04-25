@@ -4,6 +4,9 @@
   "version": "1.0",
   "permissions": ["declarativeNetRequest"],
   "host_permissions": ["https://animemusicquiz.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
   "content_scripts": [
       {
           "matches": ["https://animemusicquiz.com/*"],
