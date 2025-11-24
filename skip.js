@@ -1,11 +1,16 @@
+import * as key from "./keyobject.js";
+
+var keyS = key.makeKeyObject('KeyS', true);
+var keyF = key.makeKeyObject('KeyF', true);
+
 var answerInput = document.getElementById("qpAnswerInput")
 var chatInput = document.getElementById("gcInput")
 document.addEventListener('keydown', function(evt) {
-    if (evt.keyCode === 83 && evt.ctrlKey === true) {
+    if (key.inKeys(evt, [keyS])) {
         evt.preventDefault()
         quiz.skipClicked()
     }
-    if (evt.keyCode === 70 && evt.ctrlKey === true) {
+    if (key.inKeys(evt, [keyF])) {
         evt.preventDefault()
         if (answerInput.disabled) {
             chatInput.focus()

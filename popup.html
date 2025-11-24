@@ -8,11 +8,36 @@
     </style>
   </head>
   <body>
-    <label><input type="checkbox" id="ctrl"> Ctrl</label>
-    <label><input type="checkbox" id="alt"> Alt</label>
-    <label><input type="checkbox" id="shift"> Shift</label>
-    <label>Key: <input type="text" id="key" maxlength="1" /></label>
-    <button id="save">Save</button>
+      <div id="next">
+          <label>next</label>
+          <div id="next-shortcuts"></div>
+          <button id="next-add-button">add</button>
+      </div>
+      <div id="previous">
+          <label>previous</label>
+          <div id="previous-shortcuts"></div>
+          <button id="previous-add-button">add</button>
+      </div>
+      <div id="submit">
+          <label>submit</label>
+          <div id="submit-shortcuts"></div>
+          <button id="submit-add-button">add</button>
+      </div>
+      <div id="escape">
+          <label>escape</label>
+          <div id="escape-shortcuts"></div>
+          <button id="escape-add-button">add</button>
+      </div>
+      <div id="skip">
+          <label>skip</label>
+          <div id="skip-shortcuts"></div>
+          <button id="skip-add-button">add</button>
+      </div>
+      <div id="focus">
+          <label>switch-focus</label>
+          <div id="focus-shortcuts"></div>
+          <button id="focus-add-button">add</button>
+      </div>
   </body>
-  <script src="popup.js"></script>
+  <script type="module" src="popup.js"></script>
 </html>

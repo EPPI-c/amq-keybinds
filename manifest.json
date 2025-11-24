@@ -15,7 +15,7 @@
   ],
   "web_accessible_resources": [
       {
-          "resources": ["libs/awesomplete.js", "skip.js"],
+          "resources": ["libs/awesomplete.js", "skip.js", "keyobject.js"],
           "matches": ["https://animemusicquiz.com/*"]
       }
   ],

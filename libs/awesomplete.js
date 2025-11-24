@@ -383,9 +383,9 @@
 
             }
         },
-        keyObject: function(keyCode, ctrlKey = false, altKey = false, metaKey = false, shiftKey = false) {
+        keyObject: function(code, ctrlKey = false, altKey = false, metaKey = false, shiftKey = false) {
             return {
-                keyCode: keyCode,
+                code: code,
                 ctrlKey: ctrlKey,
                 altKey: altKey,
                 metaKey: metaKey,
@@ -393,14 +393,14 @@
             }
         },
 
-        keyObjectsAllModifiers: function(keyCode) {
+        keyObjectsAllModifiers: function(code) {
             var keyObjects = []
             var options = [false, true]
             for (var ctrlKey of options)
                 for (var altKey of options)
                     for (var metaKey of options)
                         for (var shiftKey of options)
-                            keyObjects.push(this.keyObject(keyCode, ctrlKey, altKey, metaKey, shiftKey))
+                            keyObjects.push(this.keyObject(code, ctrlKey, altKey, metaKey, shiftKey))
             return keyObjects
         }
     };
@@ -580,7 +580,7 @@
     };
 
     $.isEqual = function(key1, key2) {
-        return key1.keyCode === key2.keyCode
+        return key1.code === key2.code
             && !!key1.ctrlKey === !!key2.ctrlKey
             && !!key1.metaKey === !!key2.metaKey
             && !!key1.shiftKey === !!key2.shiftKey
@@ -598,26 +598,26 @@
     };
 
 
-    _.ENTER_KEYS = _.prototype.keyObjectsAllModifiers(13)
-    _.DOWN_KEYS = _.prototype.keyObjectsAllModifiers(40)
-    _.UP_KEYS = _.prototype.keyObjectsAllModifiers(38)
-    _.ESCAPE_KEYS = _.prototype.keyObjectsAllModifiers(18)
+    _.ENTER_KEYS = _.prototype.keyObjectsAllModifiers("Enter")
+    _.DOWN_KEYS = _.prototype.keyObjectsAllModifiers("ArrowDown")
+    _.UP_KEYS = _.prototype.keyObjectsAllModifiers("ArrowUp")
+    _.ESCAPE_KEYS = _.prototype.keyObjectsAllModifiers("Escape")
     var ctrl_y = {
-        "keyCode": 89,
+        "code": "KeyY",
         "ctrlKey": true,
         "altKey": false,
         "metaKey": false,
         "shiftKey": false
     }
     var ctrl_j = {
-        "keyCode": 74,
+        "code": "KeyJ",
         "ctrlKey": true,
         "altKey": false,
         "metaKey": false,
         "shiftKey": false
     }
     var ctrl_k = {
-        "keyCode": 75,
+        "code": "KeyK",
         "ctrlKey": true,
         "altKey": false,
         "metaKey": false,
