@@ -79,5 +79,10 @@ function createKeyBindMenu(name) {
 }
 
 function createKeyBindInput() {
-    let row
+    let row = document.createElement("div")
+    row.classList.add("row")
+    let keyDiv = document.createElement("div")
+    keyDiv.classList.add("col-xs-6")
+    row.appendChild(keyDiv)
+    // let 
 }
